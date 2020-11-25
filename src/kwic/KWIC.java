@@ -18,29 +18,8 @@ public class KWIC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-       
-        System.out.println("Ingrese cadena de texto");
-        
-        String string = sc.nextLine();
-        
-        Input input = new Input(string);
-        
-        Divider devider = new Divider();
-        
-        String [] splitInput = devider.splitString(input.getString());
-        
-        Formatter formatter = new Formatter();
-        
-        String[][] combinations = formatter.getCombinatios(splitInput);
-        
-        Sort sort = new Sort();
-        
-        String[][] sortedCombinations = sort.ascSort(combinations);
-        
-        Output output = new Output();
-        
-        output.printArray(sortedCombinations);
+        PresentationLayer presentationLayer = new PresentationLayer();
+        presentationLayer.executeLayer();
     }
     
 }
