@@ -5,6 +5,8 @@
  */
 package kwic;
 
+import java.util.Scanner;
+
 /**
  *
  * @author edgaraguilar
@@ -12,12 +14,16 @@ package kwic;
 public class Input {
     String string;
 
-    Input(String string) {
-        this.string = string;
-    }
-    
-    public String getString() {
-        return this.string;
-    }
+   public void setInput() {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Ingrese cadena de texto");
+       String scannedString = sc.nextLine();
+       
+       this.string = scannedString;
+   }
+   
+   public String getString() {
+       return this.string;
+   }
     
 }
